@@ -114,6 +114,9 @@ Grab log (example [tailscale-pod-log.txt](tailscale-pod-log.txt) with
 $ kubectl logs tailscale-5bbb6b4bb5-b85d8 -c tailscale | tee tailscale-pod-log.txt 
 ```
 
+Check Tailscale UI
+
+[!tailscale.jpg](images/tailscale.jpg)
 
 ### Test the new Tailscale site
 
@@ -228,6 +231,10 @@ KUBERNETES_PORT_443_TCP_PROTO=tcp
 KUBERNETES_PORT_443_TCP_PORT=443
 HOME=/
 ```
+
+Check Pod resources in F5XC Console UI:
+
+[!pod_resources.jpg](images/pod_resources.jpg)
 
 ## Resources
 
