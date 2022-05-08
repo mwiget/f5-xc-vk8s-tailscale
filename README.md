@@ -116,7 +116,7 @@ $ kubectl logs tailscale-5bbb6b4bb5-b85d8 -c tailscale | tee tailscale-pod-log.t
 
 Check Tailscale UI
 
-[!tailscale.jpg](images/tailscale.jpg)
+![tailscale.jpg](images/tailscale.jpg)
 
 ### Test the new Tailscale site
 
@@ -234,7 +234,7 @@ HOME=/
 
 Check Pod resources in F5XC Console UI:
 
-[!pod_resources.jpg](images/pod_resources.jpg)
+![pod_resources.jpg](images/pod_resources.jpg)
 
 ## Resources
 
