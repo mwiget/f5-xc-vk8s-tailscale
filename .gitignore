@@ -1,0 +1,5 @@
+authkey.*
+*.swp
+*key
+secret-policy
+ves*yaml

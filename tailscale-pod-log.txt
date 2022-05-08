@@ -1,0 +1,114 @@
+decrypting blindfold AAAAE3BsYXlncm91bmQtd3RwcHZhb2cAAAABAAAAAAAAAHMCAAAABQOCX5jFAAABAO0SxofVOP47/NNin8p7AAW6hJLBRvvCmesEK+KeLIkAB+slZHrva3UkOcEcItTxfwesc0ezUeRLyNd3q3wRM6fPl8GfNmdl5GGXYWHIo2Am2zvBkXB68wKbu2rkY+CdNf8wYPC8t2x+bujqTF6lrkeEGnhXp4ndCdQSv5ZcekPZXlhrniYrfiQPWBcKLi3BZevZ0KFz4UrJpsqi3vt3EiySvm+XXco4Eu/ptntM7vtjtvzVJy7hEbtyFQXsOd3sAGnIYanDUcdmEOvqww5go/DIE8YEYkyMlZss6Mhi9Ean+sQ1m659Gco/oSsf9fJqhI7TauXlBk6+VgTa3L5gZ6MAAAEAqt/8uw7jt5CfKfytCH1v2dPbwVbjvMigj6O9nh3XcUVO/X8AOCkTN71JYnWx7Aq+VATBRvy2snSiXWyELm5AtZxe/cGyvtFBuBmv9HdBVfn80/HJwQdpeyZC450yYSuNZSZh42MYPR5abjrIMCTGEdrsufNlQTlcdA7f5GcPaeizrS2Si0Ail3UsbhJZQqPVLyHvkUp7q/Zz/JDagD0wkn5iINPrbT23Ggmf3npgS6E2kxzBnAeOhp/dgiAkKZ1qyNS6DBdbcPbCoQV8QcKMTo3OCb5r1qp4EQJxa0WJQIjo6oIGjHRAcMpnt7VJ958mA+TCBiyuQ5mSly6J8xm66/P4vkQiq1KTkgtl5vxYnFGZ7bM5BkjH37RHpU6wjUbdfDy5/m2ZJzoXsy5eXMA5PCS67OeQxM4kaw== ...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+curl: (7) Failed to connect to localhost port 8070 after 1 ms: Connection refused
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+curl: (7) Failed to connect to localhost port 8070 after 0 ms: Connection refused
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+curl: (7) Failed to connect to localhost port 8070 after 1 ms: Connection refused
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 94   936    0     0  100   882      0   9643 --:--:-- --:--:-- --:--:--  9692
+curl: (22) The requested URL returned error: 503
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 94   936    0     0  100   882      0   511k --:--:-- --:--:-- --:--:--  861k
+curl: (22) The requested URL returned error: 503
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 94   936    0     0  100   882      0   9866 --:--:-- --:--:-- --:--:--  9910
+curl: (22) The requested URL returned error: 503
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 94   936    0     0  100   882      0  10044 --:--:-- --:--:-- --:--:-- 10137
+curl: (22) The requested URL returned error: 503
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   938  100    56  100   882     79   1249 --:--:-- --:--:-- --:--:--  1328100   938  100    56  100   882     79   1248 --:--:-- --:--:-- --:--:--  1328
+blindfold decrypt successful, AUTH_KEY set
+Starting tailscaled
+Setting tailscale hostname to zg01
+Running tailscale up
+2022/05/08 15:41:01 logtail started
+2022/05/08 15:41:01 Program starting: v1.24.2-tdce2409b1, Go 1.18.1-ts710a0d8610: []string{"tailscaled", "--state=/tmp/tailscaled.state", "--socket=/tmp/tailscaled.sock", "--tun=userspace-networking"}
+2022/05/08 15:41:01 LogID: 051d30b99baba10227bbf5f6e73a6de8b743945dc1fb383a113e060b388d4e2b
+2022/05/08 15:41:01 filch failed: filch: open /.cache/Tailscale/tailscaled.log1.txt: no such file or directory
+2022/05/08 15:41:01 logpolicy: using UserCacheDir, "/.cache/Tailscale"
+logpolicy.Read /.cache/Tailscale/tailscaled.log.conf: open /.cache/Tailscale/tailscaled.log.conf: no such file or directory
+logpolicy.Config.Save: mkdir /.cache: permission denied
+2022/05/08 15:41:01 wgengine.NewUserspaceEngine(tun "userspace-networking") ...
+2022/05/08 15:41:01 dns: using dns.noopManager
+2022/05/08 15:41:01 link state: interfaces.State{defaultRoute=eth0 ifs={eth0:[10.1.0.38/16]} v4=true v6=false}
+2022/05/08 15:41:01 magicsock: disco key = d:5b0cff1d413f8c90
+2022/05/08 15:41:01 Creating wireguard device...
+2022/05/08 15:41:01 Bringing wireguard device up...
+2022/05/08 15:41:01 Bringing router up...
+2022/05/08 15:41:01 Clearing router settings...
+2022/05/08 15:41:01 Starting link monitor...
+2022/05/08 15:41:01 Engine created.
+2022/05/08 15:41:02 Start
+2022/05/08 15:41:02 using backend prefs; created empty state for "_daemon": Prefs{ra=true dns=true want=false routes=[] nf=on Persist=nil}
+2022/05/08 15:41:02 Backend: logs: be:051d30b99baba10227bbf5f6e73a6de8b743945dc1fb383a113e060b388d4e2b fe:
+2022/05/08 15:41:02 Switching ipn state NoState -> NeedsLogin (WantRunning=false, nm=false)
+2022/05/08 15:41:02 health("overall"): error: state=NeedsLogin, wantRunning=false
+2022/05/08 15:41:02 blockEngineUpdates(true)
+2022/05/08 15:41:02 wgengine: Reconfig: configuring userspace wireguard config (with 0/0 peers)
+2022/05/08 15:41:02 wgengine: Reconfig: configuring router
+2022/05/08 15:41:02 wgengine: Reconfig: configuring DNS
+2022/05/08 15:41:02 dns: Set: {DefaultResolvers:[] Routes:{} SearchDomains:[] Hosts:0}
+2022/05/08 15:41:02 dns: Resolvercfg: {Routes:{} Hosts:0 LocalDomains:[]}
+2022/05/08 15:41:02 dns: OScfg: {Nameservers:[] SearchDomains:[] MatchDomains:[]}
+2022/05/08 15:41:02 ipnserver: conn2: connection from userid 1000; connection from non-root user matching daemon has access
+2022/05/08 15:41:02 Start
+2022/05/08 15:41:02 control: client.Shutdown()
+2022/05/08 15:41:02 control: client.Shutdown: inSendStatus=0
+2022/05/08 15:41:02 control: mapRoutine: quit
+2022/05/08 15:41:02 control: Client.Shutdown done.
+2022/05/08 15:41:02 using backend prefs; created empty state for "_daemon": Prefs{ra=true dns=true want=false routes=[] nf=on Persist=nil}
+2022/05/08 15:41:02 generating new machine key
+2022/05/08 15:41:02 machine key written to store
+2022/05/08 15:41:02 Backend: logs: be:051d30b99baba10227bbf5f6e73a6de8b743945dc1fb383a113e060b388d4e2b fe:
+2022/05/08 15:41:02 Switching ipn state NoState -> NeedsLogin (WantRunning=true, nm=false)
+2022/05/08 15:41:02 blockEngineUpdates(true)
+2022/05/08 15:41:02 StartLoginInteractive: url=false
+2022/05/08 15:41:02 control: client.Login(false, 2)
+2022/05/08 15:41:02 control: LoginInteractive -> regen=true
+2022/05/08 15:41:02 control: doLogin(regen=true, hasUrl=false)
+2022/05/08 15:41:02 control: control server key from https://controlplane.tailscale.com: ts2021=[fSeS+], legacy=[nlFWp]
+2022/05/08 15:41:02 control: Generating a new nodekey.
+2022/05/08 15:41:02 control: RegisterReq: onode= node=[QrsZk] fup=false
+2022/05/08 15:41:03 control: RegisterReq: got response; nodeKeyExpired=false, machineAuthorized=true; authURL=false
+2022/05/08 15:41:03 blockEngineUpdates(false)
+2022/05/08 15:41:03 active login: mwiget@gmail.com
+2022/05/08 15:41:03 Switching ipn state NeedsLogin -> Starting (WantRunning=true, nm=true)
+2022/05/08 15:41:03 magicsock: SetPrivateKey called (init)
+2022/05/08 15:41:03 wgengine: Reconfig: configuring userspace wireguard config (with 0/13 peers)
+2022/05/08 15:41:03 wgengine: Reconfig: configuring router
+2022/05/08 15:41:03 wgengine: Reconfig: configuring DNS
+2022/05/08 15:41:03 dns: Set: {DefaultResolvers:[] Routes:{} SearchDomains:[] Hosts:14}
+2022/05/08 15:41:03 dns: Resolvercfg: {Routes:{} Hosts:14 LocalDomains:[]}
+2022/05/08 15:41:03 dns: OScfg: {Nameservers:[] SearchDomains:[] MatchDomains:[]}
+2022/05/08 15:41:03 Taildrop disabled; no state directory
+2022/05/08 15:41:03 peerapi starting without Taildrop directory configured
+2022/05/08 15:41:03 peerapi: serving on http://100.94.245.230:34845
+2022/05/08 15:41:03 peerapi: serving on http://[fd7a:115c:a1e0:efe3::645e:f5e6]:34845
+2022/05/08 15:41:03 magicsock: home is now derp-4 (fra)
+2022/05/08 15:41:03 magicsock: adding connection to derp-4 for home-keep-alive
+2022/05/08 15:41:03 control: NetInfo: NetInfo{varies=true hairpin=false ipv6=false udp=true derp=#4 portmap= link=""}
+2022/05/08 15:41:03 magicsock: 1 active derp conns: derp-4=cr0s,wr0s
+2022/05/08 15:41:03 derphttp.Client.Connect: connecting to derp-4 (fra)
+2022/05/08 15:41:03 magicsock: endpoints changed: 94.231.81.87:42601 (stun), 10.1.0.38:46815 (local)
+2022/05/08 15:41:03 Switching ipn state Starting -> Running (WantRunning=true, nm=true)
+2022/05/08 15:41:03 ipnserver: conn2: ReadMsg: read unix /tmp/tailscaled.sock->@: read: connection reset by peer
+2022/05/08 15:41:03 magicsock: derp-4 connected; connGen=1
+2022/05/08 15:41:03 health("overall"): ok
+2022/05/08 15:41:15 wgengine: idle peer [9Bvg2] now active, reconfiguring wireguard
+2022/05/08 15:41:15 wgengine: Reconfig: configuring userspace wireguard config (with 1/13 peers)
+2022/05/08 15:41:15 magicsock: disco: node [9Bvg2] d:b1953ea408df1589 now using 192.168.2.163:41641
+2022/05/08 15:41:25 magicsock: endpoints changed: 94.231.81.87:42594 (stun), 10.1.0.38:46815 (local)
+2022/05/08 15:41:47 magicsock: endpoints changed: 94.231.81.87:42601 (stun), 10.1.0.38:46815 (local)
