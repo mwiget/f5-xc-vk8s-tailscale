@@ -24,8 +24,12 @@ push: build
 deploy: destroy
 	@sed -e "s;{{AUTH_KEY}};$(AUTH_KEY);g" tailscale-deployment.yaml | sed -e "s;{{BLINDFOLD}};$(BLINDFOLD);g" | sed -e "s;{{IMAGE_TAG}};$(IMAGE_TAG);g" | sed -e "s;{{ROUTES}};$(ROUTES);g" | kubectl create -f-
 
+ssh: destroy
+	@sed -e "s;{{AUTH_KEY}};$(AUTH_KEY);g" tailscale-ssh-deployment.yaml | sed -e "s;{{BLINDFOLD}};$(BLINDFOLD);g" | sed -e "s;{{IMAGE_TAG}};$(IMAGE_TAG);g" | sed -e "s;{{ROUTES}};$(ROUTES);g" | sed -e "s;{{PUBLIC_KEY}};$(PUBLIC_KEY);g" | sed -e "s;{{USER_NAME}};$(USER_NAME);g" | kubectl create -f-
+
 destroy:
 	@kubectl delete -f tailscale-deployment.yaml --ignore-not-found --grace-period=0
+	@kubectl delete -f tailscale-ssh-deployment.yaml --ignore-not-found --grace-period=0
 
 test:
 	@sed -e "s;{{AUTH_KEY}};$(AUTH_KEY);g" tailscale-deployment.yaml | sed -e "s;{{BLINDFOLD}};$(BLINDFOLD);g" | sed -e "s;{{IMAGE_TAG}};$(IMAGE_TAG);g" | sed -e "s;{{ROUTES}};$(ROUTES);g" | cat

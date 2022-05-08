@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tailscale
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tailscale
+  template:
+    metadata:
+      labels:
+        app: tailscale
+    spec:
+      containers:
+      - name: tailscale
+        image: "{{IMAGE_TAG}}"
+        imagePullPolicy: Always
+        env:
+        - name: BLINDFOLD
+          value: "{{BLINDFOLD}}"
+        - name: AUTH_KEY
+          value: "{{AUTH_KEY}}"
+        - name: ROUTES
+          value: "{{ROUTES}}"
+        securityContext:
+          runAsUser: 1000
+          runAsGroup: 1000
+      - name: ssh
+        image: lscr.io/linuxserver/openssh-server:latest
+        imagePullPolicy: Always
+        env:
+        - name: PUBLIC_KEY
+          value: "{{PUBLIC_KEY}}"
+        - name: USER_NAME
+          value: "{{USER_NAME}}"
+        - name: SUDO_ACCESS
+          value: "true"

@@ -100,6 +100,21 @@ Deploy Tailscale with
 $ make deploy
 ```
 
+An alternate manifest [tailscale-ssh-deployment.yaml](tailscale-ssh-deployment.yaml) deploys an openssh server 
+alongside tailscale and requires setting USER_NAME and PUBLIC_KEY, e.g.
+
+```
+$ printenv |grep 'USER_NAME\|PUBLIC'
+USER_NAME=mwiget
+PUBLIC_KEY=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINIoHbwDVeAxCrBqpFxAgozGdZSdLzBLvH1JiXmfFOHU mwiget@fedora0
+```
+
+Deploy this ssh enabled tailscale pod with `make ssh` instead of `make deploy`:
+
+```
+$ make ssh
+```
+
 Check the running pod with
 
 ```
@@ -154,6 +169,25 @@ PING 192.168.2.100 (192.168.2.100) 56(84) bytes of data.
 --- 192.168.2.100 ping statistics ---
 3 packets transmitted, 3 received, 0% packet loss, time 2003ms
 rtt min/avg/max/mdev = 16.532/18.579/21.367/2.041 ms
+```
+
+If the pod has been deployed with ssh enabled, you can access the pod via ssh as follows:
+
+```
+$ ssh -p 2222 mwiget@zg01
+Welcome to OpenSSH Server
+
+tailscale-67bd4589d5-p5fv8:~$ 
+tailscale-67bd4589d5-p5fv8:~$ sudo ping 192.168.2.100
+PING 192.168.2.100 (192.168.2.100): 56 data bytes
+64 bytes from 192.168.2.100: seq=0 ttl=63 time=0.190 ms
+64 bytes from 192.168.2.100: seq=1 ttl=63 time=0.158 ms
+64 bytes from 192.168.2.100: seq=2 ttl=63 time=0.166 ms
+^C
+--- 192.168.2.100 ping statistics ---
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip min/avg/max = 0.158/0.171/0.190 ms
+tailscale-67bd4589d5-p5fv8:~$ exit
 ```
 
 ## Troubleshooting
