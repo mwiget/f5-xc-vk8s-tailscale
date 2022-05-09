@@ -190,6 +190,59 @@ round-trip min/avg/max = 0.158/0.171/0.190 ms
 tailscale-67bd4589d5-p5fv8:~$ exit
 ```
 
+## multi-site vk8s cluster example
+
+Total of 4 CE's, cloud and baremetal mixed, build one virtual site with one vk8s. When new sites are added, the automatically instantiate the tailscale deployment, making those sites available via Tailscale VPN:
+
+```
+$ kubectl get pods -o wide
+NAME                         READY   STATUS    RESTARTS   AGE     IP          NODE                                                   NOMINATED NODE   READINESS GATES
+tailscale-5b9ff4c877-kw8rv   3/3     Running   0          19m     10.1.0.2    mw-tgw-1-ip-100-64-3-211.eu-north-1.compute.internal   <none>           <none>
+tailscale-67bd4589d5-p5fv8   3/3     Running   0          13h     10.1.0.44   zg01-xeon1                                             <none>           <none>
+tailscale-6c9df4c98f-k24p7   3/3     Running   0          5m52s   10.1.0.2    mw-azure-1-master-2                                    <none>           <none>
+tailscale-7c65b775bc-5d4d7   3/3     Running   0          19m     10.1.0.2    mw-tgw-2-ip-100-64-35-164.us-west-2.compute.internal   <none>           <none>
+```
+
+```
+ tailscale status |grep 'mw-\|zg01'
+ 100.93.84.211   mw-azure-1           mwiget@      linux   idle, tx 7396 rx 8108
+ 100.76.245.231  mw-tgw-1             mwiget@      linux   -
+ 100.85.90.195   mw-tgw-2             mwiget@      linux   -
+ 100.98.142.254  zg01                 mwiget@      linux   idle, tx 48892 rx 57236
+```
+
+![tailscale-3-sites.jpg](images/tailscale-3-sites.jpg)
+
+Accessing mw-azure-1 via ssh to the pod:
+
+```
+$ ssh -p 2222 mw-azure-1                                                                                  
+Welcome to OpenSSH Server
+
+tailscale-6c9df4c98f-k24p7:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+3: eth0@if67: <BROADCAST,MULTICAST,UP,LOWER_UP,M-DOWN> mtu 1436 qdisc noqueue state UP 
+    link/ether 42:32:43:b1:68:fc brd ff:ff:ff:ff:ff:ff
+    inet 10.1.0.2/16 brd 10.1.255.255 scope global eth0
+       valid_lft forever preferred_lft forever
+tailscale-6c9df4c98f-k24p7:~$ ping 1.1.1.1
+PING 1.1.1.1 (1.1.1.1): 56 data bytes
+ping: permission denied (are you root?)
+tailscale-6c9df4c98f-k24p7:~$ sudo ping 1.1.1.1
+PING 1.1.1.1 (1.1.1.1): 56 data bytes
+64 bytes from 1.1.1.1: seq=0 ttl=55 time=5.214 ms
+64 bytes from 1.1.1.1: seq=1 ttl=55 time=5.414 ms
+64 bytes from 1.1.1.1: seq=2 ttl=55 time=5.142 ms
+64 bytes from 1.1.1.1: seq=3 ttl=55 time=5.046 ms
+^C
+--- 1.1.1.1 ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max = 5.046/5.204/5.414 ms
+```
+
 ## Troubleshooting
 
 Connectivity to tailscale is via relay in my case:
